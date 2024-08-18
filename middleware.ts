@@ -8,9 +8,9 @@ import {
   publicRoutes
 } from "@/routes";
 
-const { auth } = NextAuth(authConfig);
+export const { auth } = NextAuth(authConfig);
  
-export default auth((req) => {
+export default auth((req: NextRequest) => {
   const { nextUrl } = req;
   const isLoggedIn = !!req.auth;
 
